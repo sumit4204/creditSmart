@@ -66,10 +66,10 @@ contract CreditRating is Owned {
         int ot = customers[_custAddress].onTimeCount;
         
         if(ot > dc) {
-            customers[_custAddress].creditScore = ((dc*100) / (dc + ot));
+            customers[_custAddress].creditScore = ((dc*1000) / (dc + ot));
         }
         else {
-            customers[_custAddress].creditScore = ((ot*100) / (dc + ot));
+            customers[_custAddress].creditScore = ((ot*1000) / (dc + ot));
             
         }
         
